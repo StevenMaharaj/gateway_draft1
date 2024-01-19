@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+package gateway_draft1;
+
+import "google/protobuf/empty.proto";
+
+import "proto/event.proto";
+option go_package = "github.com/stevenmaharaj/gateway_draft1/core";
+
+
+
+
+service Gateway {
+    rpc SendEvent (google.protobuf.Empty) returns (stream Event) {}
+}

@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package gateway_draft1;
+
+
+option go_package = "github.com/stevenmaharaj/gateway_draft1/core";
+
+
+enum OrderType {
+  MARKET = 0;
+  LIMIT = 1;
+  STOP = 2;
+  STOP_LIMIT = 3;
+  CANCEL = 4;
+  REPLACE = 5;
+  REJECT = 6;
+  CANCEL_REPLACE = 7;
+  CANCEL_ALL = 8;
+  TAKE_PROFIT = 9;
+  TAKE_PROFIT_LIMIT = 10;
+}
+
+enum OrderStatus {
+  NEW = 0;
+  PARTIALLY_FILLED = 1;
+  FILLED = 2;
+  CANCELED = 3;
+  PENDING_CANCEL = 4;
+  REJECTED = 5;
+  EXPIRED = 6;
+  PENDING_REPLACE = 7;
+  REPLACED = 8;
+  PENDING_NEW = 9;
+  ACCEPTED_FOR_BIDDING = 10;
+  PENDING_CANCEL_REPLACE = 11;
+  UNKNOWN = 12;
+}

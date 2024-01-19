@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package gateway_draft1;
+
+
+option go_package = "github.com/stevenmaharaj/gateway_draft1/core";
+
+import "proto/order.proto";
+
+
+enum EventType {
+  ORDER = 0;
+  TRADE = 1;
+  LT = 2;
+  OB = 3;
+}
+
+
+
+
+message Event {
+  EventType eTy = 1;
+  string s = 2;
+  double p = 3;
+  double v = 4;
+  bool isBuy = 5;
+  uint64 ts = 6;
+  string id = 7;
+  string ex = 8;
+  string inTy = 9;
+  OrderType oTy = 10;
+  OrderStatus oSt = 11;
+  string oId = 12;
+  double ap1 = 13;
+  double ap2 = 14;
+  double ap3 = 15;
+  double ap4 = 16;
+  double ap5 = 17;
+  double av1 = 18;
+  double av2 = 19;
+  double av3 = 20;
+  double av4 = 21;
+  double av5 = 22;
+  double bp1 = 23;
+  double bp2 = 24;
+  double bp3 = 25;
+  double bp4 = 26;
+  double bp5 = 27;
+  double bv1 = 28;
+  double bv2 = 29;
+  double bv3 = 30;
+  double bv4 = 31;
+  double bv5 = 32;
+  double o = 33;
+  double h = 34;
+  double l = 35;
+  double c = 36;
+
+
+  
+}
